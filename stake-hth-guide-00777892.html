@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华体会 · 轻松辨识，即刻开启</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f9f8f6;
+      color: #2c3e3f;
+      line-height: 1.7;
+    }
+    /* 深色头图 hero 区 */
+    .hero {
+      background: linear-gradient(145deg, #14222b 0%, #1b2d33 100%);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: #f9f8f6;
+      border-radius: 50% 50% 0 0 / 30px 30px 0 0;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #e8e4da;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+    .hero .sub {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #c5c2b5;
+      max-width: 540px;
+      margin: 0 auto 1rem;
+      border-bottom: 1px solid rgba(200,190,170,0.25);
+      display: inline-block;
+      padding-bottom: 0.4rem;
+    }
+    .hero .opener {
+      color: #d6d0c0;
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 1.5rem auto 0;
+      letter-spacing: 0.3px;
+    }
+    /* 正文浅色区 */
+    .content {
+      max-width: 840px;
+      margin: -2rem auto 0;
+      padding: 2.2rem 2rem 3.5rem;
+      position: relative;
+      z-index: 2;
+      background: #f9f8f6;
+    }
+    .intro-text {
+      font-size: 1.08rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #b49b7c;
+      padding-left: 1.2rem;
+      color: #3e4f50;
+    }
+    .intro-text strong {
+      color: #2a5f5c;
+      font-weight: 500;
+    }
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 1.2rem;
+      margin: 2.2rem 0 2.8rem;
+    }
+    .feature-card {
+      flex: 1 1 200px;
+      background: white;
+      border-radius: 18px;
+      padding: 1.2rem 1.5rem 1.5rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.03), 0 1px 3px rgba(30,40,40,0.06);
+      transition: transform 0.15s ease, box-shadow 0.2s;
+      border: 1px solid #ede9e0;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(40,50,45,0.06);
+    }
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #1b3d3b;
+      letter-spacing: 0.5px;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #4e5f5e;
+    }
+    .feature-icon {
+      display: inline-block;
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .gentle-tone {
+      background: #f2efe9;
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0 2.2rem;
+      border: 1px solid #e0d9ce;
+    }
+    .gentle-tone p {
+      font-size: 1.04rem;
+      color: #2f4240;
+      margin-bottom: 0.5rem;
+    }
+    .gentle-tone .link-wrap {
+      margin-top: 1rem;
+    }
+    .gentle-tone a {
+      color: #3c6b62;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #b3c6bf;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .gentle-tone a:hover {
+      color: #1f4e47;
+      border-bottom: 1px solid #1f4e47;
+    }
+    .faq-mini {
+      margin: 2rem 0 1.2rem;
+      border-top: 1px solid #e3dbcf;
+      padding-top: 1.8rem;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+    .faq-q {
+      font-weight: 500;
+      color: #2f544f;
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .faq-q::before {
+      content: '▹';
+      color: #a88e74;
+      font-size: 1.1rem;
+    }
+    .faq-a {
+      padding-left: 1.5rem;
+      color: #556562;
+      font-size: 0.95rem;
+    }
+    .closing {
+      margin-top: 2.5rem;
+      padding: 1.5rem 0 0.5rem;
+      border-top: 1px dashed #dad3c7;
+      font-style: normal;
+      color: #4d615f;
+      text-align: center;
+      font-size: 0.98rem;
+    }
+    .closing span {
+      background: #ece6db;
+      padding: 0.2rem 0.6rem;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      color: #31524d;
+    }
+    /* responsive */
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 1rem 3.5rem; }
+      .hero h1 { font-size: 2.3rem; }
+      .content { padding: 1.6rem 1rem 2.5rem; }
+      .feature-grid { gap: 1rem; }
+      .feature-card { flex: 1 1 100%; }
+      .gentle-tone { padding: 1.4rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>华体会</h1>
+    <div class="sub">一眼识别 · 轻简体验</div>
+    <p class="opener">
+      第一次来到这里，你可能想弄清楚：这个网站是做什么的？<br>
+      答案其实很安静——它只是提供了一个简洁的入口。
+    </p>
+  </section>
+
+  <main class="content">
+    <div class="intro-text">
+      <strong>华体会</strong> 是一个将常用功能聚合在一起的线上站点。没有复杂的介绍，也不需要反复猜测用途——页面结构清晰表达了自己的角色：它是一个轻量的信息与服务汇集处，帮助你快速了解所处环境。无论你想确认内容类型，还是寻找一个可靠的访问起点，这里都能给出直接的回应。
+    </div>
+
+    <!-- 特点卡片（故事承接） -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">◉</div>
+        <h3>一目了然的身份</h3>
+        <p>打开即明白「这是什么」—— 页面本身就在告诉你它的用途，无需额外解释。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◉</div>
+        <h3>克制的信息量</h3>
+        <p>没有铺满的广告或眼花缭乱的模块，只保留核心指引，让注意力自然聚焦。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◉</div>
+        <h3>平实的导航感</h3>
+        <p>从标题到内容都维持一致的语调，像一位安静的向导，不打扰，但总在。</p>
+      </div>
+    </div>
+
+    <!-- 温和嵌入链接的段落 -->
+    <div class="gentle-tone">
+      <p>许多人在寻找一个可以直接进入正题的站点：没有注册门槛、没有弹窗干扰，也不需要费力辨别真伪。这就是 <a href="https://stake-hth.com.cn">华体会</a> 所呈现的状态——一个干净、可信任的锚点。你可以把它看作一个熟悉的路标，每次回来都还是原来的位置与氛围。</p>
+      <div class="link-wrap">若想直接进入站点，上面提到的链接就是入口所在。</div>
+    </div>
+
+    <!-- FAQ 摘要 (两个问题，符合温和调性) -->
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">这个网站主要适合哪些人使用？</div>
+        <div class="faq-a">任何希望快速识别站点用途、避免多余步骤的人。不论你是第一次访问，还是想确认某个功能是否在这里，华体会都保持同样的透明度。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">我需要注册或下载什么吗？</div>
+        <div class="faq-a">不需要。页面上的所有内容都可以直接浏览，没有任何强制步骤。你只需要打开 <a href="https://stake-hth.com.cn" style="color:#3c6b62;text-decoration:underline dotted #b0c6b8;">华体会</a> 即可开始。</div>
+      </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+      <span>✧</span> 没有夸张的承诺，只有真实的界面。<br>
+      希望你每次回来，都感到自然、清晰。
+    </div>
+  </main>
+</body>
+</html>
